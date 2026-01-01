@@ -14,5 +14,1335 @@
         "transcription": "bur",
         "meaning": "strong",
         "word type": "adjective"
+    },
+    {
+        "transcription": "Albadi",
+        "morphemes": "Al-badi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Ališbi/Ališpi",
+        "morphemes": "Al-išbi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Alsa",
+        "morphemes": "Al-sa",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Alzibu",
+        "morphemes": "Al-zi-bu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šuzianna",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Ašriqa",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bugaš",
+        "morphemes": "Bug-aš",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Burna-Buriaš",
+        "morphemes": "Bur-i-aš",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Guzarzar-Bugaš",
+        "morphemes": "Bug-aš",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Bunāya",
+        "morphemes": "Bunā-ya",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Bunna-...",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Bunna-[DN]",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnanu",
+        "morphemes": "Bunn-a-nu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnaša",
+        "morphemes": "Bunna-ša",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnatu?",
+        "morphemes": "Bunna-tu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnēʾa",
+        "morphemes": "Bunn-ēʾa",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunni",
+        "morphemes": "Bunn-i",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunniya",
+        "morphemes": "Bunn-i-ya",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnunu",
+        "morphemes": "Bunn-u-nu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnunūʾa",
+        "morphemes": "Bunn-u-nū-ʾa",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunnūtu",
+        "morphemes": "Bunn-u-tu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bunzuʾu",
+        "morphemes": "Bun-zuʾ-u",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Bur-Sîn",
+        "morphemes": "Bur",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burame",
+        "morphemes": "Bur-ame",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Burna-Buriaš",
+        "morphemes": "Bur-na",
+        "meaning": "",
+        "position": "",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra-Alban",
+        "morphemes": "Al-ban",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra-Marduk",
+        "morphemes": "Bur-ra",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra-mašḫu",
+        "morphemes": "mašḫu",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra-Saḫ",
+        "morphemes": "saḫ",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra-Tišpak",
+        "morphemes": "Tišpak",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra/i-Laguda",
+        "morphemes": "Laguda",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burra/Purra-Sana/i",
+        "morphemes": "Sana",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burruqu",
+        "morphemes": "Bur-ru-qu",
+        "meaning": "",
+        "position": "",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Burte-šugab",
+        "morphemes": "Bur-te",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Dābibī",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Dimaḫdi-Nergal",
+        "morphemes": "Dimaḫdi",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Dimaḫdi-Uraš",
+        "morphemes": "Ur-aš",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Erība-šuqamuna",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Gab-Enlil",
+        "morphemes": "Gab",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Gab-Martaš",
+        "morphemes": "Mart-aš",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Gabbaša-inbu",
+        "morphemes": "Gab-ba-ša",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Gabbi-ša-Akkade",
+        "morphemes": "Gab-bi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Gimil-šamaš",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Guzar-AN",
+        "morphemes": "Guzar",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Guzarzar-Bugaš",
+        "morphemes": "Guzar-zar",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "ḫaḫ-šugab",
+        "morphemes": "šugab",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "ḫaḫ(a)-saḫ",
+        "morphemes": "ḫaḫ",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Ḫaḫia",
+        "morphemes": "ḫaḫ-ia",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ḫašmar",
+        "morphemes": "ḫašmar",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "ḫašmar-galdu",
+        "morphemes": "gal-du",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Ḫassiyašu",
+        "morphemes": "ḫass-iya-šu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "ḫira-zana",
+        "morphemes": "ḫira",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "ḫudi-jazi",
+        "morphemes": "ḫu-di",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "ḫulālu",
+        "morphemes": "ḫu-lālu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ḫummurtu",
+        "morphemes": "ḫummur-tu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "ḫudi-jazi",
+        "morphemes": "jazi/yanzi",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "ḫumurbija-saḫ",
+        "morphemes": "ḫumur-bi-ja",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šuqamuna",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "ḫura-zana",
+        "morphemes": "zaba",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Ikkukku",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ilī-ašriqa(š)",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Innibu",
+        "morphemes": "Innibu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ipša-ḫalu",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ipšu",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Išbu-ula",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Išubi",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ittiša-aḫbut",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Izbul-mašḫu",
+        "morphemes": "Iz-bul",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Izkur-šuqamuna",
+        "morphemes": "Iz-kur",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kabru",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kadašman-...",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kadašman-Enlil",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Kadašman-Turgu",
+        "morphemes": "Turgu",
+        "meaning": "",
+        "position": "Final",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "kar-zi-x",
+        "morphemes": "kar-zi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Karak-saḫ",
+        "morphemes": "kar-ak",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Karzi-B/Marattaš",
+        "morphemes": "Marratt-aš",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Karzi-Ban",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kašaakti",
+        "morphemes": "Kaš-ak-ti",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kaššu",
+        "morphemes": "Kaš-šu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kašti-Ban",
+        "morphemes": "Kaš-ti",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kaštiliašu Kaštiljašu",
+        "morphemes": "Kaš-ti-li-aš-u",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kaštilli",
+        "morphemes": "Kaš-ti-li",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Katar-iddina?",
+        "morphemes": "Ka-tar",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Mē-Kamulla",
+        "morphemes": "kamulla",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Kidin-Latarak",
+        "morphemes": "Latarak",
+        "meaning": "",
+        "position": "Final/Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kidin-šumalija",
+        "morphemes": "šumalija",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Kuri-jāni",
+        "morphemes": "jāni",
+        "meaning": "vgl. yanzi",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Kilam/ndi-Ubriaš",
+        "morphemes": "Ub-ri-aš",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Kilamdašu",
+        "morphemes": "kilam-da-šu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kilamdi-ši-ḫu",
+        "morphemes": "kilam-di-ši-ḫu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kilamdu",
+        "morphemes": "kilam-du",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kirsiga",
+        "morphemes": "Kir-si-ga",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kirsu-mala",
+        "morphemes": "Kir-su",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kisi-maditu",
+        "morphemes": "Kisi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kubšija-saḫ",
+        "morphemes": "Kub-ši-ja",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kukurmaš",
+        "morphemes": "Kukurm-aš",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kunindi-Bugaš",
+        "morphemes": "Kunindi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "KUR-ḫu-ni-ti",
+        "morphemes": "ḫu-ni-ti",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Kuri-jāni",
+        "morphemes": "Kuri",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Kurigalzu",
+        "morphemes": "Kuri-galzu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kurušni",
+        "morphemes": "Kuruš-ni",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Kuššija",
+        "morphemes": "Kušš-ija",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Latarak-Bāni",
+        "morphemes": "Latarak",
+        "meaning": "",
+        "position": "Final/Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Madmi-šuḫ",
+        "morphemes": "suḫ",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Madmi-šuḫ",
+        "morphemes": "Madmi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Maktari-šaḫ",
+        "morphemes": "Maktari",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Mē-Kamulla",
+        "morphemes": "Mē",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Mē-Šumeliya",
+        "morphemes": "šumeliya",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Mē-Šuqamuna",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Mediljašu/Mitlijašu",
+        "morphemes": "Medili-ja-šu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Meḫulpi-x",
+        "morphemes": "Me-ḫulpi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Meli-Šipak",
+        "morphemes": "Meli",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Menaḫzi",
+        "morphemes": "Me-naḫzi",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Mīnâ-ēgu-[...]",
+        "morphemes": "Minā",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Mīnâ-ēgu-ana-ili",
+        "morphemes": "ēgu",
+        "meaning": "",
+        "position": "Medial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Mīnâ-ēpuš-ila",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Muššini-saḫ",
+        "morphemes": "muššini",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Nagim-Saḫ",
+        "morphemes": "Nagim",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Nagim-saḫ",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Naḫzi-Marduk",
+        "morphemes": "Naḫ-zi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Naḫzutu",
+        "morphemes": "Naḫ-zu-tu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Nazi-Maruttaš",
+        "morphemes": "Nazi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Nimgirab-[GN]",
+        "morphemes": "Nimgirab",
+        "meaning": "",
+        "position": "Initila",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Nimgirābu",
+        "morphemes": "Nimgirab-u",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Nunakte",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Nuriki?",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Pungulu",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Qunnu",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Radbaš",
+        "morphemes": "Rad-baš",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Sabiḫari",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Sad-abujatu",
+        "morphemes": "sad",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šad-ḫumurti",
+        "morphemes": "šad",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šadda-gan-im-ti",
+        "morphemes": "šad-da",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šaddagme",
+        "morphemes": "šad-dag-me",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šaddaḫaš",
+        "morphemes": "šad-da-ḫaš",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šadmezi",
+        "morphemes": "šad-mezi",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Šagarakti",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Šagarakti-Šuriaš",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šagarēʾa",
+        "morphemes": "šagar-ēʾa",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Šagarūtu",
+        "morphemes": "šaga-rūtu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šara/i-Zana",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šigadi-saḫ",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šigite-Sani",
+        "morphemes": "sani",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "ṣilli-šudda",
+        "morphemes": "šudda",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "šimdi-ši-ḫu",
+        "morphemes": "šimdi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šindi-Enlil",
+        "morphemes": "šindi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šindi-šugab",
+        "morphemes": "šu-gab",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "šira-ḫarbe",
+        "morphemes": "ši-ra",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Širištu",
+        "morphemes": "ši-riš-tu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "širni-šaḫ",
+        "morphemes": "šir-ni",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Sirraya",
+        "morphemes": "sir-ra-ya",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Šubagīya",
+        "morphemes": "šu-bag-i-ya",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šudaḫ-x-",
+        "morphemes": "šu-daḫ",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Sugir-bunni",
+        "morphemes": "su-gir",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "šuḫila",
+        "morphemes": "šu-ḫi-la",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šuḫurni",
+        "morphemes": "šu-ḫur-ni",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "šummak-lā-[DN]",
+        "morphemes": "šu-mmak",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "šuri",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Šurīḫa-īli",
+        "morphemes": "šu-ri-ḫa",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Šurīḫa-Marduk",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Šutāpu",
+        "morphemes": "šu-tā-pu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Tabšini-šaḫ",
+        "morphemes": "Tabšini",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Tamda/i-šaḫ",
+        "morphemes": "Tamda",
+        "meaning": "",
+        "position": "Intial",
+        "function": ""
+    },
+    {
+        "transcription": "Tamti-Ištaran",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Taramdi-šaḫ",
+        "morphemes": "Taramdi",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Tarâmūtu",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Tarâšūtu",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Tari...",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Tarma-abu",
+        "morphemes": "Tarma",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Ulam-gadidi",
+        "morphemes": "gadidi",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Tunami-Saḫ",
+        "morphemes": "Tunami",
+        "meaning": "",
+        "position": "Intial",
+        "function": ""
+    },
+    {
+        "transcription": "Ugēʾa",
+        "morphemes": "Ugēʾa",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Ula-Gindar",
+        "morphemes": "",
+        "meaning": "",
+        "position": "Inital",
+        "function": ""
+    },
+    {
+        "transcription": "Ula-Gisuk",
+        "morphemes": "Gisuk",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Ula-Gindar",
+        "morphemes": "Gindar",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Ulam-gadidi",
+        "morphemes": "gadidi",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Uni-saḫ",
+        "morphemes": "Uni",
+        "meaning": "",
+        "position": "Intial",
+        "function": ""
+    },
+    {
+        "transcription": "Urpa-Burijaš",
+        "morphemes": "Urpa",
+        "meaning": "",
+        "position": "Intial",
+        "function": ""
+    },
+    {
+        "transcription": "Urpa-nibi",
+        "morphemes": "nibi",
+        "meaning": "",
+        "position": "Final",
+        "function": ""
+    },
+    {
+        "transcription": "Urpaši-mašḫu",
+        "morphemes": "Urpa-šu",
+        "meaning": "",
+        "position": "Intial",
+        "function": ""
+    },
+    {
+        "transcription": "Urzi-Burijaš",
+        "morphemes": "Ur-zi",
+        "meaning": "",
+        "position": "Inital",
+        "function": ""
+    },
+    {
+        "transcription": "Usbi-Enlil",
+        "morphemes": "Usbi",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Ušbula",
+        "morphemes": "Ušbu-la",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Uzi-Marduk",
+        "morphemes": "Uzi",
+        "meaning": "",
+        "position": "Initial",
+        "function": "Theophor"
+    },
+    {
+        "transcription": "Uzi-šugab",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Uzib-Šikmi?",
+        "morphemes": "Uzi-b",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Uzibu",
+        "morphemes": "Uzi-bu",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Uzima-ḫarbe",
+        "morphemes": "Uzi-ma",
+        "meaning": "",
+        "position": "Initial",
+        "function": ""
+    },
+    {
+        "transcription": "Uzub-ḫala",
+        "morphemes": "",
+        "meaning": "",
+        "position": "",
+        "function": ""
+    },
+    {
+        "transcription": "Uzub-nibu",
+        "morphemes": "Uz-ub",
+        "meaning": "",
+        "position": "Inital",
+        "function": ""
     }
 ]

@@ -5,11 +5,11 @@ Analysierte Datensätze: 575
 ### Theophore Elemente (Götternamen)
  | Kategorie                 |   Anzahl |   Anteil % |
 |---------------------------|----------|------------|
-| saḫ                       |       68 |      30.0% |
 | Sah                       |       68 |      30.0% |
+| saḫ                       |       68 |      30.0% |
 | Bugaš                     |       14 |       6.2% |
-| Šugab                     |       13 |       5.7% |
 | Sugab                     |       13 |       5.7% |
+| Šugab                     |       13 |       5.7% |
 | Harbe                     |       13 |       5.7% |
 | buriyaš                   |       13 |       5.7% |
 | enlil                     |       10 |       4.4% |
@@ -17,9 +17,9 @@ Analysierte Datensätze: 575
 | bugašu                    |        3 |       1.3% |
 | Buriaš                    |        2 |       0.9% |
 | Maruttaš                  |        2 |       0.9% |
-| Šuriaš                    |        1 |       0.4% |
 | suriaš                    |        1 |       0.4% |
-| Indaš                     |        1 |       0.4% |
+| Šuriaš                    |        1 |       0.4% |
+| indas                     |        1 |       0.4% |
 
 ### Bevorzugte Anlaute
  | Kategorie                 |   Anzahl |   Anteil % |

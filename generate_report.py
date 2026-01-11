@@ -30,13 +30,9 @@ def run_report():
         print("Fehler: Datenbank nicht gefunden. Bitte zuerst main.py ausführen!")
         return
     
-    
-    starts = []
-    ends = []
-    all_clusters = [] 
-    cv_structures = []
-    morpheme_roots = []
-    morpheme_suffixes = []
+    # Listen initialisieren
+    starts, ends, all_clusters, cv_structures = [], [], [], []
+    morpheme_roots, morpheme_suffixes = [], []
     theophoric_counts = Counter()
     
     for entry in db:
@@ -68,22 +64,39 @@ def run_report():
     cluster_counts = Counter(cluster_strings)
     cluster_type_data = analyze_cluster_types(all_clusters)
     
+    
     suffix_to_roots = {}
     for entry in db:
         r = entry.get('morpheme_root')
         s = entry.get('morpheme_suffix')
         if r and s:
-            r = r.capitalize()
-            s = s.lower()
-            if s not in suffix_to_roots:
-                suffix_to_roots[s] = []
-            if r not in suffix_to_roots[s]: 
-                suffix_to_roots[s].append(r)
+            r, s = r.capitalize(), s.lower()
+            if s not in suffix_to_roots: suffix_to_roots[s] = []
+            if r not in suffix_to_roots[s]: suffix_to_roots[s].append(r)
+    
+    
+    root_to_suffixes = {}
+    for entry in db:
+        r = entry.get('morpheme_root')
+        s = entry.get('morpheme_suffix') 
+        if r and s:
+            r, s = r.capitalize(), s.lower()
+            if r not in root_to_suffixes: root_to_suffixes[r] = []
+            if s not in root_to_suffixes[r]: root_to_suffixes[r].append(s)
+    
+    root_productivity = {r: len(s_list) for r, s_list in root_to_suffixes.items()}
 
-    report = []
-    report.append("# Kassitische Onomastik\n")
-    report.append(f"Analysierte Datensätze: {len(db)}")
-
+    
+    report = ["# Kassitische Onomastik\n", f"Analysierte Datensätze: {len(db)}"]
+    total_names = len(db)
+    morphemes_found = sum(1 for e in db if e.get('morpheme_root') and e.get('morpheme_suffix'))
+    success_rate = (morphemes_found / total_names) * 100 if total_names > 0 else 0
+    report = ["# Kassite Onomastics\n"]
+    report.append(f"**Dataset Overview:**")
+    report.append(f"- Total Names Analyzed: {total_names}")
+    report.append(f"- Morphemes Successfully Identified: {morphemes_found}")
+    report.append(f"- Recognition Success Rate: {success_rate:.1f}%\n")
+    report.append("---")
     report.append(generate_markdown_table(theophoric_counts, "Theophore Elemente (Götternamen)"))
     report.append(generate_markdown_table(Counter(starts), "Bevorzugte Anlaute"))
     report.append(generate_markdown_table(Counter(ends), "Bevorzugte Auslaute"))
@@ -93,20 +106,27 @@ def run_report():
     report.append(generate_markdown_table(Counter(cv_structures), "Top Silbenstrukturen (CV-Muster)"))
     report.append(generate_markdown_table(Counter(morpheme_roots), "Häufigste Morphem-Wurzeln (Top 15)"))
     report.append(generate_markdown_table(Counter(morpheme_suffixes), "Häufigste Suffixe (Automatisch erkannt)"))
+    
+    
     report.append("\n## Vertiefende Suffix-Analyse: Wurzel-Kombinationen")
     report.append("| Suffix | Anzahl Belege | Beispiel-Wurzeln (Kollokationen) |")
     report.append("| :--- | :---: | :--- |")
-    
     sorted_suffixes = sorted(Counter(morpheme_suffixes).items(), key=lambda x: x[1], reverse=True)
-    
     for suff, count in sorted_suffixes[:20]:
         roots_list = ", ".join(suffix_to_roots.get(suff, [])[:5]) 
         report.append(f"| **-{suff}** | {count} | {roots_list} ... |")
 
+    
+    report.append("\n## Root Productivity: Most Versatile Morphemes")
+    report.append("| Root | Unique Suffixes | Suffix List |")
+    report.append("| :--- | :---: | :--- |")
+    sorted_roots = sorted(root_productivity.items(), key=lambda x: x[1], reverse=True)
+    for root, count in sorted_roots[:15]:
+        suffixes_found = ", ".join(root_to_suffixes[root])
+        report.append(f"| **{root}** | {count} | {suffixes_found} |")
+
+    print(f"DEBUG: Anzahl produktiver Wurzeln gefunden: {len(root_productivity)}")
     with open("output/phonetik_tabelle.md", "w", encoding="utf-8") as f:
-            f.write("\n".join(report))
+        f.write("\n".join(report))
 
-    print("\n[INFO] Der tabellarische Bericht wurde in 'output/phonetik_tabelle.md' gespeichert.")
-
-if __name__ == "__main__":
-    run_report()
+print("\n[INFO] Der tabellarische Bericht wurde in 'output/phonetik_tabelle.md' gespeichert.")

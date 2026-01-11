@@ -156,7 +156,6 @@ def main():
     for label, count in class_counts.most_common():
         print(f"{label:<15} | {count}")
     
-# 7. Positions-Analyse
     starts = []
     ends = []
     
@@ -227,15 +226,44 @@ def main():
     
     print("Starte Zerlegung der Namen in Wurzel + Suffix...")
     
+    
+    erfolgreich_zerlegt = 0
     for entry in db:
         name = entry.get('transcription')
         if name: 
+            
             root_morph, suffix_morph = split_kassite_morphemes(name, custom_suffixes=auto_suffixes)
+            
             
             entry['morpheme_root'] = root_morph
             entry['morpheme_suffix'] = suffix_morph
             
+            if root_morph and suffix_morph:
+                erfolgreich_zerlegt += 1
+    
+    
+    print(f"[DEBUG] Namen mit gefundenen Morphemen: {erfolgreich_zerlegt}")
+
+    
+    save_database(db, "data/kassite_names_db_enriched.json")
+    print("[SUCCESS] Datenbank wurde physisch auf der Festplatte aktualisiert.")
+
+    all_names_cleaned = []
+    for entry in db:
+        name = entry.get('transcription', '')
+        gods = entry.get('detected_gods', [])
+        cleaned_name = name
+        for g in gods:
+            cleaned_name = cleaned_name.replace(g, "")
+        
+        if len(cleaned_name) > 3:
+            all_names_cleaned.append(cleaned_name)
+    
+    
+    auto_suffixes_data = discover_suffixes(all_names_cleaned)
+
     save_database(db, "data/kassite_names_db_enriched.json")
     print("[SUCCESS] Morphem-Analyse abgeschlossen und gespeichert.")
+        
 if __name__ == "__main__":
     main()

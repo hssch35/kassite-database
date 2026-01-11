@@ -76,3 +76,21 @@ def get_root_vowel(root):
     """Extrahiert den letzten Vokal innerhalb der Wurzel."""
     vowels = re.findall(r'[aeiou]', root.lower())
     return vowels[-1] if vowels else None
+
+def analyze_phonetic_classes(text):
+    """
+    Klassifiziert die Laute einer Wurzel in Gruppen.
+    """
+    classes = {
+        'Labiale': 'pbmf',      
+        'Dentale': 'tdnsz',     
+        'Velare': 'kgḫx',       
+        'Sibilanten': 'šszz'    
+    }
+    
+    found_classes = []
+    for char in text.lower():
+        for label, chars in classes.items():
+            if char in chars:
+                found_classes.append(label)
+        return found_classes

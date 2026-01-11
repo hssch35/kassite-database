@@ -1,5 +1,5 @@
 from src.data_handler import load_database, save_database
-from src.linguistics import analyze_theophoric_elements, isolate_stems, split_stem_suffix, get_consonant_clusters, get_root_vowel
+from src.linguistics import analyze_theophoric_elements, isolate_stems, split_stem_suffix, get_consonant_clusters, get_root_vowel, analyze_phonetic_classes
 
 
 def main():
@@ -126,6 +126,19 @@ def main():
     print("-" * 30)
     for pattern, count in vowel_harm_counts.most_common():
         print(f"{pattern:<15} | {count}")
+
+    all_phonetic_classes = []
+    for entry in db:
+        root = entry.get('root')
+        if root:
+            all_phonetic_classes.extend(analyze_phonetic_classes(root))
+            
+    class_counts = Counter(all_phonetic_classes)
+    
+    print("\n--- Verteilung der Lautklassen ---")
+    for label, count in class_counts.most_common():
+        print(f"{label:<15} | {count}")
+    
 
 
 if __name__ == "__main__":

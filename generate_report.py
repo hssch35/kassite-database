@@ -67,9 +67,21 @@ def run_report():
     cluster_strings = ["".join(c) for c in all_clusters]
     cluster_counts = Counter(cluster_strings)
     cluster_type_data = analyze_cluster_types(all_clusters)
+    
+    suffix_to_roots = {}
+    for entry in db:
+        r = entry.get('morpheme_root')
+        s = entry.get('morpheme_suffix')
+        if r and s:
+            r = r.capitalize()
+            s = s.lower()
+            if s not in suffix_to_roots:
+                suffix_to_roots[s] = []
+            if r not in suffix_to_roots[s]: 
+                suffix_to_roots[s].append(r)
 
     report = []
-    report.append("# Linguistischer Expertenbericht: Kassitische Onomastik\n")
+    report.append("# Kassitische Onomastik\n")
     report.append(f"Analysierte Datensätze: {len(db)}")
 
     report.append(generate_markdown_table(theophoric_counts, "Theophore Elemente (Götternamen)"))
@@ -81,6 +93,15 @@ def run_report():
     report.append(generate_markdown_table(Counter(cv_structures), "Top Silbenstrukturen (CV-Muster)"))
     report.append(generate_markdown_table(Counter(morpheme_roots), "Häufigste Morphem-Wurzeln (Top 15)"))
     report.append(generate_markdown_table(Counter(morpheme_suffixes), "Häufigste Suffixe (Automatisch erkannt)"))
+    report.append("\n## Vertiefende Suffix-Analyse: Wurzel-Kombinationen")
+    report.append("| Suffix | Anzahl Belege | Beispiel-Wurzeln (Kollokationen) |")
+    report.append("| :--- | :---: | :--- |")
+    
+    sorted_suffixes = sorted(Counter(morpheme_suffixes).items(), key=lambda x: x[1], reverse=True)
+    
+    for suff, count in sorted_suffixes[:20]:
+        roots_list = ", ".join(suffix_to_roots.get(suff, [])[:5]) 
+        report.append(f"| **-{suff}** | {count} | {roots_list} ... |")
 
     with open("output/phonetik_tabelle.md", "w", encoding="utf-8") as f:
             f.write("\n".join(report))

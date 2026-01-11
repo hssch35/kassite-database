@@ -1,4 +1,4 @@
-
+# Kassitische Onomastik
 
 Analysierte Datensätze: 575
 
@@ -160,3 +160,27 @@ Analysierte Datensätze: 575
 | ugaš                      |       11 |       2.3% |
 | ašḫu                      |       11 |       2.3% |
 | muna                      |       11 |       2.3% |
+
+## Vertiefende Suffix-Analyse: Wurzel-Kombinationen
+| Suffix | Anzahl Belege | Beispiel-Wurzeln (Kollokationen) |
+| :--- | :---: | :--- |
+| **--saḫ** | 61 | Burra, Ḫaḫ(a), Ḫumurbija, Karak, Kubšija ... |
+| **-iyaš** | 22 | Biri-šur, Gab-bur, Kilamdi-ubr, Kilandi-bur, Kilandi-ubr ... |
+| **-ni** | 14 | Bun, Kuri-jā, Kuruš, Latarak-bā, Šigite-sa ... |
+| **-aš** | 13 | Burna-buri, Dimaḫdi-ur, Kilam/ndi-ubri, Radb, Šaddaḫ ... |
+| **-rduk** | 13 | Burra-ma, Naḫzi-ma, Šurīḫa-ma, Uzi-ma, Buraša-ma ... |
+| **-ugab** | 13 | Burte-š, Ḫaḫ-š, Šindi-š, Uzi-š, Ḫāmaš-š ... |
+| **-arbe** | 13 | Šira-ḫ, Uzima-ḫ, Gab-ḫ, Ḫušši-ḫ, Kadašman-ḫ ... |
+| **-iya** | 12 | Bunn, Mē-šumel, Ḫušt, Kirs, Kirz ... |
+| **-tu** | 12 | Bunnū, Ḫummur, Kisi-madi, Naḫzu, Sad-abuja ... |
+| **-ašu** | 12 | Ḫassiy, Kaštiliašu kaštilj, Kilamd, Mediljašu/mitlij, Bi-bug ... |
+| **-zi** | 12 | Ḫudi-ja, Menaḫ, Šadme, Burami, Ḫir ... |
+| **-šiḫu** | 12 | Ḫarba-, Kadašman-, Kilamdi-, Meli-, Nazi- ... |
+| **-ugaš** | 11 | B, Guzarzar-b, Kunindi-b, Gunini-b, Gunizar-b ... |
+| **-ašḫu** | 11 | Burra-m, Izbul-m, Urpaši-m, Burni-m, Duni-m ... |
+| **-muna** | 11 | Erība-šuqa, Šuqa, Izkur-šuqa, Mē-šuqa, Burra-šuqa ... |
+| **-li** | 10 | Ma, Kaštil, Mīnâ-ēgu-ana-i, Šurīḫa-ī, Bula-ḫa ... |
+| **-nlil** | 10 | Gab-e, Kadašman-e, Šindi-e, Usbi-e, Nazi-e ... |
+| **-du** | 10 | Ḫašmar-gal, Kilam, Burraši-gal, Ḫašar, Kunin ... |
+| **-ya** | 8 | Bunā, Sirra, Šubagī, Bure, Gurpazadu ... |
+| **-zana** | 8 | Ḫira-, Ḫura-, Šara/i-, Badu-, Šara- ... |

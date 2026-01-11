@@ -141,3 +141,4 @@ def analyze_cluster_types(clusters):
             structure_counts[struct] = structure_counts.get(struct, 0) + 1
             
     return structure_counts
+

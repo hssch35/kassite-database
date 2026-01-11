@@ -194,6 +194,20 @@ def main():
     sorted_structures = sorted(clusters_structures.items(), key=lambda x: x[1], reverse=True)
     for struct, count in sorted_structures[:5]:
             print(f"{struct:<20} | {count}")
+    
+    structures = []
+    for entry in db:
+        struct = entry.get('structure')
+        if struct:
+            structures.append(struct)
+    
+    struct_counts = Counter(structures)
+    
+    print("\n--- Top 10 Silbenstrukturen (aus der DB) ---")
+    for s, count in struct_counts.most_common(10):
+        
+        percentage = (count / len(structures)) * 100
+        print(f"{s:<20} | {count:>3} ({percentage:.1f}%)")
         
 if __name__ == "__main__":
     main()

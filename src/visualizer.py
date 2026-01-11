@@ -30,3 +30,33 @@ def plot_god_distribution(theophoric_names):
     plt.tight_layout()
     # Wichtig: In Skripten brauchen wir plt.show(), damit das Fenster aufpoppt
     plt.show()
+    
+import matplotlib.pyplot as plt
+
+def plot_phonetic_distribution(counts, title, filename):
+    """Erstellt ein Balkendiagramm für Lautklassen."""
+    labels = list(counts.keys())
+    values = list(counts.values())
+
+    plt.figure(figsize=(10, 6))
+    plt.bar(labels, values, color='skyblue', edgecolor='navy')
+    plt.title(title)
+    plt.ylabel('Häufigkeit')
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    
+    plt.savefig(f"output/{filename}.png")
+    plt.close()
+
+def plot_vowel_correlation(correlation_counts, filename):
+    """Visualisiert die Wurzel-Suffix-Vokal-Muster."""
+    
+    top_patterns = dict(correlation_counts.most_common(8))
+    
+    plt.figure(figsize=(12, 6))
+    plt.bar(top_patterns.keys(), top_patterns.values(), color='salmon')
+    plt.title('Vokal-Korrelation (Wurzel -> Suffix)')
+    plt.xlabel('Muster (Wurzelvokal -> Suffix)')
+    plt.ylabel('Anzahl')
+    
+    plt.savefig(f"output/{filename}.png")
+    plt.close()

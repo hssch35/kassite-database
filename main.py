@@ -1,5 +1,9 @@
+import os
+if not os.path.exists('output'):
+    os.makedirs('output')
 from src.data_handler import load_database, save_database
 from src.linguistics import analyze_theophoric_elements, isolate_stems, split_stem_suffix, get_consonant_clusters, get_root_vowel, analyze_phonetic_classes, analyze_positions
+from src.visualizer import plot_phonetic_distribution, plot_vowel_correlation
 
 
 def main():
@@ -166,6 +170,12 @@ def main():
     print("\n--- Phonetik: Bevorzugte Auslaute (Wurzelende) ---")
     for label, count in end_counts.most_common():
         print(f"{label:<15} | {count}")
+
+    plot_phonetic_distribution(start_counts, "Bevorzugte Anlaute (Wurzelbeginn)", "anlaute")
+    plot_phonetic_distribution(end_counts, "Bevorzugte Auslaute (Wurzelende)", "auslaute")
+    plot_vowel_correlation(vowel_harm_counts, "vokal_muster")
+
+    print("\n[INFO] Grafiken wurden im Ordner 'output/' gespeichert.")
 
 if __name__ == "__main__":
     main()

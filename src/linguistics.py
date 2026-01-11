@@ -110,9 +110,8 @@ def analyze_positions(root):
         'Dentale': 'tdnsz',
         'Velare': 'kgḫx',
         'Sibilanten': 'šsž'
-    }
-    
-    def get_class(char):
+    }  
+def get_class(char):
         c = char.lower()
         for label, chars in classes.items():
             if c in chars:
@@ -120,4 +119,25 @@ def analyze_positions(root):
         return "Vokal/Sonstige"
 
     
-    return get_class(clean_root[0]), get_class(clean_root[-1])
+        return get_class(clean_root[0]), get_class(clean_root[-1])
+
+def analyze_cluster_types(clusters):
+    """Kategorisiert Konsonanten-Cluster nach ihren Lautklassen."""
+    categories = {
+        'r': 'Liquida', 'l': 'Liquida',
+        'n': 'Nasale', 'm': 'Nasale',
+        'b': 'Labiale', 'p': 'Labiale',
+        'd': 'Dentale', 't': 'Dentale',
+        'g': 'Velare', 'k': 'Velare',
+        'š': 'Sibilanten', 's': 'Sibilanten'
+    }
+    
+    structure_counts = {}
+    for cluster in clusters:
+        if len(cluster) == 2:
+            c1 = categories.get(cluster[0].lower(), 'Andere')
+            c2 = categories.get(cluster[1].lower(), 'Andere')
+            struct = f"{c1}+{c2}"
+            structure_counts[struct] = structure_counts.get(struct, 0) + 1
+            
+    return structure_counts

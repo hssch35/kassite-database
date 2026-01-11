@@ -2,8 +2,17 @@ import os
 if not os.path.exists('output'):
     os.makedirs('output')
 from src.data_handler import load_database, save_database
-from src.linguistics import analyze_theophoric_elements, isolate_stems, split_stem_suffix, get_consonant_clusters, get_root_vowel, analyze_phonetic_classes, analyze_positions
-from src.visualizer import plot_phonetic_distribution, plot_vowel_correlation
+from src.linguistics import (
+    analyze_theophoric_elements, 
+    isolate_stems, 
+    split_stem_suffix, 
+    get_consonant_clusters, 
+    get_root_vowel, 
+    analyze_phonetic_classes, 
+    analyze_positions, 
+    analyze_cluster_types
+)
+from src.visualizer import (plot_vowel_correlation, plot_phonetic_distribution)
 
 
 def main():
@@ -143,33 +152,29 @@ def main():
     for label, count in class_counts.most_common():
         print(f"{label:<15} | {count}")
     
+# 7. Positions-Analyse
     starts = []
     ends = []
-    
     
     for entry in db:
         root = entry.get('root')
         if root:
-            res_start, res_end = analyze_positions(root)
-            if res_start:
+            result = analyze_positions(root)
+            if result and result[0] is not None:
+                res_start, res_end = result
                 starts.append(res_start)
-            if res_end:
                 ends.append(res_end)
 
-    
     start_counts = Counter(starts)
     end_counts = Counter(ends)
 
     print("\n--- Phonetik: Bevorzugte Anlaute (Wurzelbeginn) ---")
-    if not starts:
-        print("Keine Daten gefunden. Überprüfe, ob entry['root'] gespeichert wird!")
-    else:
-        for label, count in start_counts.most_common():
+    for label, count in start_counts.most_common():
             print(f"{label:<15} | {count}")
 
     print("\n--- Phonetik: Bevorzugte Auslaute (Wurzelende) ---")
     for label, count in end_counts.most_common():
-        print(f"{label:<15} | {count}")
+            print(f"{label:<15} | {count}")
 
     plot_phonetic_distribution(start_counts, "Bevorzugte Anlaute (Wurzelbeginn)", "anlaute")
     plot_phonetic_distribution(end_counts, "Bevorzugte Auslaute (Wurzelende)", "auslaute")
@@ -177,5 +182,18 @@ def main():
 
     print("\n[INFO] Grafiken wurden im Ordner 'output/' gespeichert.")
 
+    all_clusters = []
+    for entry in db:
+        res = get_consonant_clusters(entry.get('root',''))
+        all_clusters.extend(res)
+    
+        clusters_structures = analyze_cluster_types(all_clusters)
+    
+    print("\n--- Analyse der Cluster-Strukturen (Lautklassen) ---")
+    
+    sorted_structures = sorted(clusters_structures.items(), key=lambda x: x[1], reverse=True)
+    for struct, count in sorted_structures[:5]:
+            print(f"{struct:<20} | {count}")
+        
 if __name__ == "__main__":
     main()

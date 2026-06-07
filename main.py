@@ -1,19 +1,31 @@
 import os
 from collections import Counter
+
 if not os.path.exists('output'):
     os.makedirs('output')
 from src.data_handler import load_database, save_database
 from src.linguistics import (
-    analyze_theophoric_elements, 
-    isolate_stems, 
-    split_stem_suffix, 
-    get_consonant_clusters, 
-    get_root_vowel, 
-    analyze_phonetic_classes, 
-    analyze_positions, 
+    analyze_theophoric_elements,
+    isolate_stems,
+    split_stem_suffix,
+    get_consonant_clusters,
+    get_root_vowel,
+    analyze_phonetic_classes,
+    analyze_positions,
     analyze_cluster_types,
     get_sonority_value,
-    analyze_sonority_slope, discover_suffixes, split_kassite_morphemes
+    analyze_sonority_slope,
+    discover_suffixes,
+    split_kassite_morphemes,
+    # new analyses
+    analyze_phoneme_inventory,
+    analyze_bigrams,
+    analyze_name_length,
+    analyze_syllable_distribution,
+    analyze_vowel_by_position,
+    detect_consonantal_skeleton_variants,
+    find_minimal_pairs,
+    analyze_theophoric_productivity,
 )
 
 from src.visualizer import (plot_vowel_correlation, plot_phonetic_distribution)
@@ -54,18 +66,11 @@ def main():
     
     save_database(db, "data/kassite_names_db_enriched.json")
     print(f"Angereicherte Datenbank mit {len(results)} Götter-Tags gespeichert.")
-    
-    save_database(db, "data/kassite_names_db_enriched.json")
-    print(f"Angereicherte Datenbank gespeichert.")
 
-    
-    from collections import Counter
-    
-    
     stems = [
         entry.get('isolated_stem') 
         for entry in db 
-        if entry.get('isolated_stem') and entry.get('isolated_stem') not in ["Unbekannt", "Unebkannt"]
+        if entry.get('isolated_stem') and entry.get('isolated_stem') not in ["Unbekannt"]
     ]
     
     
@@ -79,12 +84,10 @@ def main():
     for stem, count in top_stems:
         print(f"{stem:<15} | {count}") 
         
-    morphology_results = []
-
     suffixes = []
     for entry in db: 
         stem = entry.get('isolated_stem')
-        if stem and stem not in ["Unbekannt", "Unebkannt"]:
+        if stem and stem not in ["Unbekannt"]:
             root, suffix = split_stem_suffix(stem)
             entry['root'] = root
             entry['suffix'] = suffix
@@ -99,7 +102,7 @@ def main():
     roots = []
     for entry in db:
         root = entry.get('root')
-        if root and root not in ["Unbekannt", "Unebkannt"]:
+        if root and root not in ["Unbekannt"]:
             roots.append(root)
     
     root_counts = Counter(roots)
@@ -187,10 +190,10 @@ def main():
 
     all_clusters = []
     for entry in db:
-        res = get_consonant_clusters(entry.get('root',''))
+        res = get_consonant_clusters(entry.get('root', ''))
         all_clusters.extend(res)
-    
-        clusters_structures = analyze_cluster_types(all_clusters)
+
+    clusters_structures = analyze_cluster_types(all_clusters)
     
     print("\n--- Analyse der Cluster-Strukturen (Lautklassen) ---")
     
@@ -245,9 +248,6 @@ def main():
     print(f"[DEBUG] Namen mit gefundenen Morphemen: {erfolgreich_zerlegt}")
 
     
-    save_database(db, "data/kassite_names_db_enriched.json")
-    print("[SUCCESS] Datenbank wurde physisch auf der Festplatte aktualisiert.")
-
     all_names_cleaned = []
     for entry in db:
         name = entry.get('transcription', '')
@@ -255,15 +255,83 @@ def main():
         cleaned_name = name
         for g in gods:
             cleaned_name = cleaned_name.replace(g, "")
-        
         if len(cleaned_name) > 3:
             all_names_cleaned.append(cleaned_name)
-    
-    
-    auto_suffixes_data = discover_suffixes(all_names_cleaned)
 
     save_database(db, "data/kassite_names_db_enriched.json")
     print("[SUCCESS] Morphem-Analyse abgeschlossen und gespeichert.")
-        
+
+    # ------------------------------------------------------------------
+    # New analyses
+    # ------------------------------------------------------------------
+    all_transcriptions = [e.get('transcription') for e in db if e.get('transcription')]
+
+    # 1. Phoneme inventory
+    consonant_counts, vowel_counts = analyze_phoneme_inventory(all_transcriptions)
+    print("\n--- Rekonstruiertes Phonem-Inventar (Konsonanten) ---")
+    print(f"{'Phonem':<10} | {'Häufigkeit'}")
+    print("-" * 25)
+    for ph, cnt in consonant_counts.most_common():
+        print(f"{ph:<10} | {cnt}")
+
+    print("\n--- Vokal-Inventar ---")
+    for v, cnt in vowel_counts.most_common():
+        print(f"{v:<10} | {cnt}")
+
+    # 2. Bigram frequencies (top 15 — reveals phonotactic preferences)
+    bigrams = analyze_bigrams(all_transcriptions)
+    print("\n--- Top 15 Bigramme (Phonotaktik) ---")
+    print(f"{'Bigramm':<10} | {'Häufigkeit'}")
+    print("-" * 25)
+    for bg, cnt in bigrams.most_common(15):
+        print(f"{bg:<10} | {cnt}")
+
+    # 3. Name length distribution
+    length_dist = analyze_name_length(all_transcriptions)
+    print("\n--- Namenslängen-Verteilung (Zeichen) ---")
+    for length in sorted(length_dist.keys()):
+        bar = '#' * length_dist[length]
+        print(f"{length:>3} Zeichen: {length_dist[length]:>4}  {bar}")
+
+    # 4. Syllable count distribution
+    syllable_dist = analyze_syllable_distribution(all_transcriptions)
+    print("\n--- Silbenanzahl-Verteilung ---")
+    for nsyl in sorted(syllable_dist.keys()):
+        print(f"{nsyl} Silbe(n): {syllable_dist[nsyl]}")
+
+    # 5. Vowel position analysis
+    v_initial, v_medial, v_final = analyze_vowel_by_position(all_transcriptions)
+    print("\n--- Vokalposition: anlautend | medial | auslautend ---")
+    all_vowels = sorted(set(list(v_initial) + list(v_medial) + list(v_final)))
+    print(f"{'Vokal':<8} | {'Anlaut':>8} | {'Medial':>8} | {'Auslaut':>8}")
+    print("-" * 42)
+    for v in all_vowels:
+        print(f"{v:<8} | {v_initial.get(v, 0):>8} | {v_medial.get(v, 0):>8} | {v_final.get(v, 0):>8}")
+
+    # 6. Consonantal skeleton variants (possible scribal alternations)
+    variants = detect_consonantal_skeleton_variants(all_transcriptions)
+    print(f"\n--- Konsonantenskelett-Varianten ({len(variants)} Gruppen) ---")
+    for skeleton, name_variants in sorted(variants.items(), key=lambda x: -len(x[1]))[:15]:
+        print(f"  [{skeleton}]: {', '.join(name_variants)}")
+
+    # 7. Minimal pairs
+    pairs = find_minimal_pairs(all_transcriptions)
+    print(f"\n--- Minimale Paare ({len(pairs)} gefunden) ---")
+    for a, b in pairs[:20]:
+        diff_pos = next(i for i, (x, y) in enumerate(zip(a, b)) if x != y)
+        print(f"  {a}  /  {b}  (Pos {diff_pos + 1}: '{a[diff_pos]}' vs '{b[diff_pos]}')")
+
+    # 8. Theophoric productivity (deity popularity as name-forming element)
+    god_productivity = analyze_theophoric_productivity(db)
+    print("\n--- Theophore Produktivität (Götter × einzigartige Stämme) ---")
+    print(f"{'Gottheit':<20} | {'Einzigartige Stämme'}")
+    print("-" * 42)
+    for god, count in sorted(god_productivity.items(), key=lambda x: -x[1]):
+        print(f"{god:<20} | {count}")
+
+    save_database(db, "data/kassite_names_db_enriched.json")
+    print("\n[SUCCESS] Alle erweiterten Analysen abgeschlossen und gespeichert.")
+
+
 if __name__ == "__main__":
     main()
